@@ -7,6 +7,7 @@ import discord
 def setup(bot):
     @bot.slash_command(name='export_photos', description='Exporter les photos choisi par date et par salon')
     async def export_photos(ctx, date_debut : str, date_fin  : str , nom_export  : str):
+        salon = ctx.channel
         date_debut_converti = parse_date(date_debut)
         date_fin_converti = parse_date(date_fin)
         embed = discord.Embed(
@@ -16,3 +17,4 @@ def setup(bot):
         )
 
         await ctx.respond(embed=embed)
+        await scanner(salon,date_debut_converti,date_fin_converti)
