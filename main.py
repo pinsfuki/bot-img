@@ -18,4 +18,4 @@ async def on_ready(): #ici je déclare la foction on_ready qui est asynchrone
 
 bot.load_extensions('commands.ping', 'commands.export_photos') #permet de charger la commande ping.py
 
-bot.run(api_key) #lance le bot
+bot.run(api_key) #lance le bot 
