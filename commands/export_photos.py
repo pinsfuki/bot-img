@@ -9,10 +9,10 @@ def setup(bot):
     async def export_photos(ctx, date_debut : str, date_fin  : str , nom_export  : str):
         salon = ctx.channel
         date_debut_converti = parse_date(date_debut)
-        date_fin_converti = parse_date(date_fin)
+        date_fin_converti = parse_date(date_fin, fin=True)
         embed = discord.Embed(
             title = 'Info',
-            description = (f'Ok je vais chercher les photos de {date_debut_converti} à {date_fin_converti} et ton fichier se nommera {nom_export} :)'),
+            description = (f'Ok je vais chercher les photos de {date_debut} à {date_fin} et ton fichier se nommera {nom_export} :)'),
             color=discord.Color.orange()
         )
 
