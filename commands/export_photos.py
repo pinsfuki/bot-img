@@ -17,4 +17,5 @@ def setup(bot):
         )
 
         await ctx.respond(embed=embed)
-        await scanner(salon,date_debut_converti,date_fin_converti)
+        total_images = await scanner(salon,date_debut_converti,date_fin_converti)
+        print(total_images)
