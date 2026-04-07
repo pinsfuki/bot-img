@@ -27,5 +27,5 @@ def setup(bot):
             description = (f"J'ai trouvé un total de {total_images} image(s)  :smile: "),
             color=discord.Color.orange()
         )
-        await asyncio.sleep(3)
+        await asyncio.sleep(1)
         await ctx.followup.send(embed=reponse)
